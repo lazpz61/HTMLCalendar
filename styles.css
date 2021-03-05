@@ -1,0 +1,103 @@
+body {
+    margin: 0px;
+}
+
+* { 
+    box-sizing: border-box;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100vw;
+    background-color: lightblue;
+}
+
+.container .header {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    font-family: 'Merienda', cursive;
+}
+.container .header button{
+    width: 75px;
+    background-color: pink;
+    border-color: plum;
+    border-radius: 7px;
+    box-shadow: 3px 3px 15px 1px rgba(0,0,0,0.3);
+    font-family: 'Merienda', cursive;
+}
+
+.container .header button:focus {
+    outline: none;
+}
+.container .header button:active {
+    border-style: outset;
+    transform: translate(3px,3px);
+    box-shadow: 2px 2px 13px 1px rgba(0,0,0,0.3);
+}
+
+.container .content {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 25px repeat(6,1fr);
+    justify-items: center;
+    align-items: center;
+    border: 1px solid black;
+    max-width: 760px;
+    width: 80%;
+    height: 70%;
+    box-shadow: 3px 3px 15px 1px rgba(0,0,0,0.3);
+    background-color: rgb(243, 255, 132);
+}
+.container .content .day-of-week {
+    border: 1px solid black;
+    width:100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Merienda', cursive;
+}
+
+.container .content .calendar-box {
+    display: grid;
+    grid-template-columns: 25px 1fr;
+    grid-template-rows: 25px 1fr;
+    border: 1px solid black;
+    height: 100%;
+}
+
+.container .content .calendar-box .date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    font-family: 'Merienda', cursive;
+}
+
+.container .content .calendar-box textarea {
+    grid-row: 2;
+    grid-column: 1/-1;
+}
+
+.container .content .overflow {
+    border-color: lightgrey;
+}
+
+.container .content .overflow .date {
+    border-color: lightgrey;
+    color:lightgray;
+}
+
+.container .content .overflow textarea {
+    border-color: lightgrey;
+}
+.container .footer {
+    font-family: 'Merienda', cursive;
+}
